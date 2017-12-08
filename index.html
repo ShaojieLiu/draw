@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>draw</title>
+	<style>
+		#canvas{
+			border: 1px dashed lightskyblue;
+		}
+	</style>
+</head>
+<body>
+<canvas id="canvas" width='800px' height='640px'></canvas>
+<br>
+<button id="pen">pen</button>
+<button id="eraser">eraser</button>
+
+<script type="text/javascript" src="./utils.js"></script>
+<script type="text/javascript" src="./tool.js"></script>
+<script type="text/javascript" src="./store.js"></script>
+<script type="text/javascript" src="./canvas.js"></script>
+<script type="text/javascript" src="./line.js"></script>
+<script type="text/javascript" src="./bezier.js"></script>
+<!--<script type="text/javascript" src="main-backup.js"></script>-->
+<script>
+	{
+		const store = new Store()
+		const tool = new Tool(store)
+		const canvas = new Canvas(el('#canvas'), store)
+	}
+//	{
+//		testSpeed({
+//		  	x: 10,
+//		  	y: 10,
+//		}, {
+//			x: 100,
+//			y: 10,
+//		}, {
+//			x: 100,
+//			y: 100,
+//		})
+//	}
+
+</script>
+</body>
+</html>
